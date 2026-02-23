@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARCHISPACE — Architecture & Design d'Intérieur</title>
+  <meta name="description" content="Archispace, agence d'architecture et design d'intérieur parisienne fondée en 2018. Réalisations haut de gamme pour une clientèle premium : particuliers, entrepreneurs, investisseurs." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" id="nav" aria-label="Navigation principale">
+    <a href="#accueil" class="nav__logo" aria-label="Archispace — Accueil">
+      ARCHISPACE
+    </a>
+    <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks" role="list">
+      <li><a href="#accueil" class="nav__link">Accueil</a></li>
+      <li><a href="#projets" class="nav__link">Projets</a></li>
+      <li><a href="#agence" class="nav__link">Archispace</a></li>
+      <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== SECTION 1 — ACCUEIL ===================== -->
+  <section class="hero" id="accueil" aria-label="Accueil">
+    <div class="hero__bg" style="background-image: url('hero.png');" role="img" aria-label="Espace architectural minimaliste — Paris"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <p class="hero__eyebrow reveal">Paris · Depuis 2018</p>
+      <h1 class="hero__title reveal reveal--delay-1">
+        L'espace<br /><em>comme langage.</em>
+      </h1>
+      <p class="hero__subtitle reveal reveal--delay-2">
+        Architecture et design d'intérieur d'exception.<br />
+        De la vision à l'œuvre accomplie.
+      </p>
+      <a href="#projets" class="btn btn--light reveal reveal--delay-3" id="heroCtaBtn">
+        Découvrir nos projets
+      </a>
+    </div>
+    <a href="#projets" class="hero__scroll" aria-label="Défiler vers les projets">
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ===================== SECTION 2 — NOS PROJETS ===================== -->
+  <section class="projects" id="projets" aria-label="Nos projets">
+    <div class="container">
+      <header class="section-header reveal">
+        <p class="section-label">Réalisations sélectionnées</p>
+        <h2 class="section-title">Nos Projets</h2>
+      </header>
+
+      <div class="projects__grid">
+
+        <!-- Projet 1 -->
+        <article class="project-card reveal" tabindex="0" aria-label="Penthouse Lumière Noire — Paris 16e">
+          <div class="project-card__img-wrap">
+            <img src="proj1.png" alt="Penthouse Lumière Noire, salon avec vue sur Paris" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Résidentiel</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">Penthouse Lumière Noire</h3>
+            <p class="project-card__meta">Paris 16<sup>e</sup> &nbsp;·&nbsp; 210 m²</p>
+          </div>
+        </article>
+
+        <!-- Projet 2 -->
+        <article class="project-card reveal" tabindex="0" aria-label="Villa Horizon — Cannes">
+          <div class="project-card__img-wrap">
+            <img src="proj2.png" alt="Villa Horizon, piscine à débordement face à la mer — Cannes" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Villa de luxe</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">Villa Horizon</h3>
+            <p class="project-card__meta">Cannes &nbsp;·&nbsp; 480 m²</p>
+          </div>
+        </article>
+
+        <!-- Projet 3 -->
+        <article class="project-card reveal" tabindex="0" aria-label="Loft Atelier 11 — Paris">
+          <div class="project-card__img-wrap">
+            <img src="proj3.png" alt="Loft Atelier 11, espace industriel transformé — Paris" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Loft</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">Loft Atelier 11</h3>
+            <p class="project-card__meta">Paris &nbsp;·&nbsp; 150 m²</p>
+          </div>
+        </article>
+
+        <!-- Projet 4 -->
+        <article class="project-card reveal" tabindex="0" aria-label="Siège social Nova Tech — La Défense">
+          <div class="project-card__img-wrap">
+            <img src="proj4.png" alt="Siège social Nova Tech, open space premium — La Défense" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Tertiaire</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">Siège Social Nova Tech</h3>
+            <p class="project-card__meta">La Défense &nbsp;·&nbsp; 900 m²</p>
+          </div>
+        </article>
+
+        <!-- Projet 5 -->
+        <article class="project-card reveal" tabindex="0" aria-label="Concept Store Obsidian — Paris centre">
+          <div class="project-card__img-wrap">
+            <img src="proj5.png" alt="Concept Store Obsidian, intérieur élégant — Paris centre" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Retail</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">Concept Store Obsidian</h3>
+            <p class="project-card__meta">Paris centre &nbsp;·&nbsp; 120 m²</p>
+          </div>
+        </article>
+
+        <!-- Projet 6 — sans image (quota dépassé) : visuel CSS généré -->
+        <article class="project-card reveal" tabindex="0" aria-label="Résidence Minimal House — Genève">
+          <div class="project-card__img-wrap">
+            <div class="project-card__placeholder" aria-hidden="true">
+              <span class="proj-placeholder-inner"></span>
+            </div>
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Résidentiel</span>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">Résidence Minimal House</h3>
+            <p class="project-card__meta">Genève &nbsp;·&nbsp; 300 m²</p>
+          </div>
+        </article>
+
+      </div><!-- /projects__grid -->
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 3 — ARCHISPACE ===================== -->
+  <section class="about" id="agence" aria-label="L'agence Archispace">
+    <div class="container about__inner">
+      <div class="about__visual reveal">
+        <div class="about__metric-block">
+          <span class="about__metric-num">48</span>
+          <span class="about__metric-label">Projets<br />livrés</span>
+        </div>
+        <div class="about__metric-block">
+          <span class="about__metric-num">7</span>
+          <span class="about__metric-label">Années<br />d'expertise</span>
+        </div>
+        <div class="about__metric-block">
+          <span class="about__metric-num">4</span>
+          <span class="about__metric-label">Prix<br />d'architecture</span>
+        </div>
+        <div class="about__deco" aria-hidden="true"></div>
+      </div>
+      <div class="about__text">
+        <header class="section-header section-header--left reveal">
+          <p class="section-label">Notre histoire</p>
+          <h2 class="section-title">Archispace</h2>
+        </header>
+        <p class="about__body reveal reveal--delay-1">
+          Fondée en 2018 à Paris, Archispace naît d'une conviction : chaque espace 
+          incarne une vision. Nous accompagnons particuliers exigeants, entrepreneurs 
+          visionnaires et investisseurs avertis dans la conception et la réalisation 
+          de projets d'exception.
+        </p>
+        <p class="about__body reveal reveal--delay-2">
+          Notre méthode repose sur l'écoute, la rigueur et une sensibilité 
+          architecturale nourrie par le minimalisme japonais et l'élégance 
+          européenne. Chaque projet est unique, chaque détail est intentionnel.
+        </p>
+        <ul class="about__values reveal reveal--delay-3" aria-label="Nos valeurs">
+          <li>
+            <span class="about__value-icon" aria-hidden="true">—</span>
+            <span><strong>Singularité</strong> — Chaque projet est une œuvre sur mesure.</span>
+          </li>
+          <li>
+            <span class="about__value-icon" aria-hidden="true">—</span>
+            <span><strong>Excellence</strong> — Des matériaux, des artisans, un standard sans compromis.</span>
+          </li>
+          <li>
+            <span class="about__value-icon" aria-hidden="true">—</span>
+            <span><strong>Durabilité</strong> — Des espaces pensés pour traverser le temps.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 4 — CONTACT ===================== -->
+  <section class="contact" id="contact" aria-label="Contact Archispace">
+    <div class="container contact__inner">
+
+      <div class="contact__info reveal">
+        <header class="section-header section-header--left">
+          <p class="section-label">Démarrons ensemble</p>
+          <h2 class="section-title">Contact</h2>
+        </header>
+        <p class="contact__body">
+          Vous avez un projet ? Parlons-en.<br />
+          Chaque collaboration débute par une conversation.
+        </p>
+        <address class="contact__address">
+          <p>
+            <span class="contact__detail-label">Adresse</span><br />
+            12 Rue du Faubourg Saint-Honoré<br />
+            75008 Paris, France
+          </p>
+          <p>
+            <span class="contact__detail-label">Email</span><br />
+            <a href="mailto:contact@archispace.fr">contact@archispace.fr</a>
+          </p>
+          <p>
+            <span class="contact__detail-label">Téléphone</span><br />
+            <a href="tel:+33142000000">+33 (0)1 42 00 00 00</a>
+          </p>
+        </address>
+      </div>
+
+      <form class="contact__form reveal reveal--delay-1" id="contactForm" novalidate aria-label="Formulaire de contact">
+        <div class="form-group">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" autocomplete="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="votre@email.com" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label for="project">Type de projet</label>
+          <select id="project" name="project">
+            <option value="" disabled selected>Sélectionner</option>
+            <option value="residential">Résidentiel</option>
+            <option value="commercial">Commercial / Tertiaire</option>
+            <option value="retail">Retail</option>
+            <option value="other">Autre</option>
+          </select>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet, vos attentes, votre calendrier…" required></textarea>
+        </div>
+        <div class="form-group form-group--full">
+          <button type="submit" class="btn btn--dark" id="formSubmitBtn">
+            Envoyer ma demande
+          </button>
+        </div>
+        <p class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">ARCHISPACE</span>
+      <p class="footer__copy">&copy; 2025 Archispace. Tous droits réservés. Paris, France.</p>
+      <nav class="footer__nav" aria-label="Liens secondaires">
+        <a href="#accueil">Accueil</a>
+        <a href="#projets">Projets</a>
+        <a href="#agence">Agence</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ===================== CHATBOT WIDGET ===================== -->
+  <div class="chatbot" id="chatbot" role="complementary" aria-label="Assistant Archispace">
+
+    <!-- Toggle button -->
+    <button class="chatbot__toggle" id="chatbotToggle" aria-label="Ouvrir l'assistant" aria-expanded="false" aria-controls="chatbotPanel">
+      <svg class="chatbot__icon chatbot__icon--open" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" fill="currentColor"/>
+      </svg>
+      <svg class="chatbot__icon chatbot__icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <!-- Chat panel -->
+    <div class="chatbot__panel" id="chatbotPanel" aria-hidden="true">
+      <header class="chatbot__header">
+        <div class="chatbot__avatar" aria-hidden="true">A</div>
+        <div>
+          <p class="chatbot__name">Archispace</p>
+          <p class="chatbot__status">Assistant &nbsp;<span class="chatbot__dot" aria-hidden="true"></span></p>
+        </div>
+      </header>
+
+      <div class="chatbot__messages" id="chatMessages" role="log" aria-live="polite" aria-atomic="false">
+        <!-- Messages injectés dynamiquement -->
+      </div>
+
+      <div class="chatbot__input-wrap">
+        <input
+          type="text"
+          class="chatbot__input"
+          id="chatInput"
+          placeholder="Écrivez votre message…"
+          autocomplete="off"
+          aria-label="Votre message"
+          maxlength="500"
+        />
+        <button class="chatbot__send" id="chatSend" aria-label="Envoyer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
