@@ -135,7 +135,7 @@
      *
      * Exemple: 'https://your-n8n-instance.com/webhook/archispace-chat'
      */
-    webhookUrl: 'REMPLACER_PAR_VOTRE_WEBHOOK_N8N',
+    webhookUrl: 'http://76.13.63.153:5678/webhook/chatbot',
 
     welcomeMessages: [
       'Bonjour et bienvenue chez Archispace. 👋',
@@ -219,22 +219,24 @@
 
   /* ── Webhook call ─────────────────────────────────────── */
   async function fetchWebhook(message) {
-    if (!CONFIG.webhookUrl || CONFIG.webhookUrl.includes('REMPLACER')) {
-      // Webhook not configured — use smart fallback
-      return buildLocalReply(message);
-    }
-
     const response = await fetch(CONFIG.webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message, source: 'archispace-website' })
+      body: JSON.stringify({ message })
     });
 
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
 
-    // Accepte { reply }, { message } ou { response }
-    return data.reply || data.message || data.response || 'Merci pour votre message !';
+    const contentType = response.headers.get('content-type') || '';
+    if (contentType.includes('application/json')) {
+      const data = await response.json();
+      // Accepte { reply }, { message }, { response } ou { output }
+      return data.reply || data.message || data.response || data.output
+        || (typeof data === 'string' ? data : 'Merci pour votre message !');
+    }
+    // Réponse texte brut
+    const text = await response.text();
+    return text.trim() || 'Merci pour votre message !';
   }
 
   /* ── Local smart fallback (avant intégration n8n) ────── */
