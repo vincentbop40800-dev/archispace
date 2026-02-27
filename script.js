@@ -135,8 +135,7 @@
      *
      * Exemple: 'https://your-n8n-instance.com/webhook/archispace-chat'
      */
-    webhookUrl: 'http://76.13.63.153:5678/webhook/chatbot',
-
+   webhookUrl: 'https://archispace-vb.tech/webhook/chatbot',
     welcomeMessages: [
       'Bonjour et bienvenue chez Archispace. 👋',
       `Je suis votre assistant d\u00e9di\u00e9. Comment puis-je vous aider avec votre projet d'architecture ou de design d'int\u00e9rieur ?`
