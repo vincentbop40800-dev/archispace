@@ -228,7 +228,7 @@
    if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
     const contentType = response.headers.get('content-type') || '';
-    if (contentType.includes('application/json')) {
+if (false && contentType.includes('application/json')) {
       const data = await response.json();
       // Accepte { reply }, { message }, { response } ou { output }
       return data.reply || data.message || data.response || data.output
