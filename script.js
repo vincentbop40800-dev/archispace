@@ -11,8 +11,9 @@
   const linksEl = document.getElementById('navLinks');
   const navLinks = document.querySelectorAll('.nav__link');
 
-  /* Scroll-based class */
-  function onScroll() {
+  const sections = document.querySelectorAll('section[id]');
+    /* Scroll-based class */
+    function onScroll() {
     nav.classList.toggle('nav--scrolled', window.scrollY > 80);
     highlightActiveSection();
   }
@@ -38,7 +39,7 @@
   });
 
   /* Highlight active section in nav */
-  const sections = document.querySelectorAll('section[id]');
+
   function highlightActiveSection() {
     const scrollPos = window.scrollY + 120;
     sections.forEach(section => {
