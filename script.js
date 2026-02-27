@@ -225,7 +225,7 @@
       body: JSON.stringify({ message })
     });
 
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+   if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
     const contentType = response.headers.get('content-type') || '';
     if (contentType.includes('application/json')) {
